@@ -71,5 +71,15 @@ namespace spdeploy
             Form2 form = new Form2();
             form.Show();
         }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
