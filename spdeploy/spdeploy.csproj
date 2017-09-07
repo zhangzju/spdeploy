@@ -48,9 +48,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DMSkin">
-      <HintPath>..\..\DMSkin-B316\DMSkin.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\json\Bin\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -65,6 +62,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tftp.Net">
+      <HintPath>..\..\tftp4net\Tftp4Net 1.1\Binaries\Tftp.Net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">

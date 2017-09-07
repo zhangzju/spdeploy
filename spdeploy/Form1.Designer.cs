@@ -38,9 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // folderBrowserDialog1
@@ -81,15 +81,14 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Service Provider 01",
-            "Service Provider 02",
-            "Service Provider 03",
-            "Service Provider 04",
-            "Service Provider 05"});
+            "MNET",
+            "Sibnet",
+            "Binatone"});
             this.comboBox1.Location = new System.Drawing.Point(12, 79);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -105,22 +104,23 @@
             this.comboBox2.DisplayMember = "配置类型";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Repair ",
-            "Specific",
-            "Restore default settings"});
+            "VR500",
+            "C20",
+            "RN401"});
             this.comboBox2.Location = new System.Drawing.Point(147, 79);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 20);
             this.comboBox2.TabIndex = 5;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(145, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(59, 12);
             this.label2.TabIndex = 6;
-            this.label2.Text = "配置类型";
+            this.label2.Text = "机型Model";
             // 
             // checkedListBox1
             // 
@@ -146,15 +146,6 @@
             this.button4.Text = "Serve";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(165, 198);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Stop";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(165, 227);
@@ -174,6 +165,15 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Choose sectors to refresh";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(165, 198);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Stop";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -211,9 +211,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button5;
     }
 }
 

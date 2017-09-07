@@ -14,7 +14,11 @@ namespace spdeploy
 {
     public partial class Form1 : Form
     {
-        static string filepath = Application.StartupPath;
+        static string filePath = Application.StartupPath + "\\config";
+        static string ispName = "MNET";
+        static string serverPath = Application.StartupPath;
+        static string deviceModel = "VR500";
+        Program.spdeployConfig config = new Program.spdeployConfig();
 
         public Form1(IContainer components, FolderBrowserDialog folderBrowserDialog1, Button button1, Button button2)
         {
@@ -34,15 +38,17 @@ namespace spdeploy
             DialogResult dialogResult = folderBrowserDialog1.ShowDialog();
             if( dialogResult == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show(folderBrowserDialog1.SelectedPath);
-                filepath = folderBrowserDialog1.SelectedPath;
+
+                filePath = folderBrowserDialog1.SelectedPath;
+                config.configPath = filePath + "\\config";
+                MessageBox.Show(config.configPath);
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog config_file = new OpenFileDialog();
-            config_file.InitialDirectory = filepath;
+            config_file.InitialDirectory = filePath;
             DialogResult result = config_file.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -80,6 +86,16 @@ namespace spdeploy
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
         }
     }
 }
